@@ -59,7 +59,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
                     FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 mLocationPermissionsGranted = true;
-                initMap();
+                initMap(); // shows the toast even after permisson has been granted
             } else {
                 ActivityCompat.requestPermissions(this,
                         permissions, LOCATION_PERMISSION_REQUEST_CODE);
